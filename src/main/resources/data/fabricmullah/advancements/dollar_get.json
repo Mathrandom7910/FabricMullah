@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "fabricmullah:dollar"
+    },
+    "title": "Slightly Richer",
+    "description": "Get a dollar.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "fabricmullah:textures/item/dollar.png"
+  },
+  "parent": "fabricmullah:penny_get",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fabricmullah:dollar"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

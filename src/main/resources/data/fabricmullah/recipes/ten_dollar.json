@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "fabricmullah:dollar"
+    }
+  },
+  "result": {
+    "item": "fabricmullah:ten_dollar"
+  }
+}

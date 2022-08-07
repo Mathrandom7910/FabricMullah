@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "fabricmullah:penny"
+    },
+    "title": "I'm ri- wait...",
+    "description": "Get a penny.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "fabricmullah:textures/backgrounds/green_bg.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fabricmullah:penny"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

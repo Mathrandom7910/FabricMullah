@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "fabricmullah:ten_dollar"
+    },
+    "title": "Breaking Even",
+    "description": "Get a ten dollar bill.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "fabricmullah:textures/item/ten_dollar.png"
+  },
+  "parent": "fabricmullah:dollar_get",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fabricmullah:ten_dollar"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
