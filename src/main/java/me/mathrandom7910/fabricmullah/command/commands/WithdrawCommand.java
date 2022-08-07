@@ -15,6 +15,8 @@ import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;
 
+import java.util.Arrays;
+
 
 public class WithdrawCommand implements ICommandable {
 
@@ -32,18 +34,18 @@ public class WithdrawCommand implements ICommandable {
                                 }
 
                                 for(int i = 0; i < amount; i++) {
-                                    boolean mfound = false;
-                                    for(MoneyItem moneyItem : MONEY_ITEMS) {
-                                        if(amount >= moneyItem.getItemCost() && amount - i >= moneyItem.getItemCost()) {
-                                            spawnItemEntity(new ItemStack(moneyItem, 1), player);
-                                            i += moneyItem.getItemCost() - 1;
-                                            Fabricmullah.decrBalance(player, moneyItem);
-                                            mfound = true;
-                                            break;
-                                        }
-                                    }
-                                    if(mfound) continue;
-                                    /*
+//                                    boolean mfound = false;
+//                                    for(MoneyItem moneyItem : MONEY_ITEMS) {
+//                                        if(amount >= moneyItem.getItemCost() && amount - i >= moneyItem.getItemCost()) {
+//                                            spawnItemEntity(new ItemStack(moneyItem, 1), player);
+//                                            i += moneyItem.getItemCost() - 1;
+//                                            Fabricmullah.decrBalance(player, moneyItem);
+//                                            mfound = true;
+//                                            break;
+//                                        }
+//                                    }
+//                                    if(mfound) continue;
+
                                     if(amount >= THOUSAND_DOLLAR_ITEM.getItemCost() && amount - i >= THOUSAND_DOLLAR_ITEM.getItemCost()) {
                                         spawnItemEntity(new ItemStack(THOUSAND_DOLLAR_ITEM, 1), player);
                                         i += THOUSAND_DOLLAR_ITEM.getItemCost() - 1;
@@ -70,12 +72,12 @@ public class WithdrawCommand implements ICommandable {
                                         i += DOLLAR_ITEM.getItemCost() - 1;
                                         Fabricmullah.decrBalance(player, DOLLAR_ITEM.getItemCost());
                                         continue;
-                                    }*/
+                                    }
 
                                     spawnItemEntity(new ItemStack(PENNY_ITEM, 1), player);
                                     Fabricmullah.decrBalance(player, PENNY_ITEM.getItemCost());
                                 }
-                                player.sendMessage(Text.of("Withdrew " + amount + ", current balance is " + Fabricmullah.getBalance(player)), false);
+                            player.sendMessage(Text.of("Withdrew " + amount + ", current balance is " + Fabricmullah.getBalance(player)), false);
                             Fabricmullah.updateTop(player);
                             return 0;
                         })));

@@ -9,6 +9,8 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+import java.util.Arrays;
+
 public class ItemRegistry implements IRegistry {
 
     public static final MoneyItem PENNY_ITEM = registerMoneyItem("penny", new MoneyItem(new FabricItemSettings().group(ItemGroup.MISC), 1));
@@ -17,12 +19,11 @@ public class ItemRegistry implements IRegistry {
     public static final MoneyItem HUNDRED_DOLLAR_ITEM = registerMoneyItem("hundred_dollar", initMoneyItem(TEN_DOLLAR_ITEM));
     public static final MoneyItem THOUSAND_DOLLAR_ITEM = registerMoneyItem("thousand_dollar", initMoneyItem(HUNDRED_DOLLAR_ITEM));
 
-    public static final MoneyItem[] MONEY_ITEMS = new MoneyItem[]{PENNY_ITEM, DOLLAR_ITEM, TEN_DOLLAR_ITEM, HUNDRED_DOLLAR_ITEM, THOUSAND_DOLLAR_ITEM};
+    public static final MoneyItem[] MONEY_ITEMS = new MoneyItem[]{ PENNY_ITEM, DOLLAR_ITEM, TEN_DOLLAR_ITEM, HUNDRED_DOLLAR_ITEM, THOUSAND_DOLLAR_ITEM };
 
 //    public static final Item COUPON_ITEM = Registry.register(Registry.ITEM, new Identifier(Fabricmullah.ID, "coupon"), new Item(new FabricItemSettings().group(ItemGroup.MISC)));
 
     private static MoneyItem registerMoneyItem(String name, Item item) {
-
         return (MoneyItem) Registry.register(Registry.ITEM, new Identifier(Fabricmullah.ID, name), item);
     }
 
