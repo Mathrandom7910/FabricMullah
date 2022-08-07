@@ -19,7 +19,7 @@ public class ItemRegistry implements IRegistry {
 
     public static final MoneyItem[] MONEY_ITEMS = new MoneyItem[]{PENNY_ITEM, DOLLAR_ITEM, TEN_DOLLAR_ITEM, HUNDRED_DOLLAR_ITEM, THOUSAND_DOLLAR_ITEM};
 
-    public static final Item COUPON_ITEM = Registry.register(Registry.ITEM, new Identifier(Fabricmullah.ID, "coupon"), new Item(new FabricItemSettings().group(ItemGroup.MISC)));
+//    public static final Item COUPON_ITEM = Registry.register(Registry.ITEM, new Identifier(Fabricmullah.ID, "coupon"), new Item(new FabricItemSettings().group(ItemGroup.MISC)));
 
     private static MoneyItem registerMoneyItem(String name, Item item) {
 

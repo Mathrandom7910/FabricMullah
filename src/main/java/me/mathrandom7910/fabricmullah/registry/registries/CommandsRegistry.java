@@ -2,7 +2,6 @@ package me.mathrandom7910.fabricmullah.registry.registries;
 
 import me.mathrandom7910.fabricmullah.Fabricmullah;
 import me.mathrandom7910.fabricmullah.command.ICommandable;
-import me.mathrandom7910.fabricmullah.command.commands.CouponCommand;
 import me.mathrandom7910.fabricmullah.command.commands.balance.BalanceCommand;
 import me.mathrandom7910.fabricmullah.command.commands.PayCommand;
 import me.mathrandom7910.fabricmullah.command.commands.DepositCommand;
@@ -21,7 +20,6 @@ public class CommandsRegistry implements IRegistry {
         CommandRegistrationCallback.EVENT.register(new BalanceCommand()::register);
         CommandRegistrationCallback.EVENT.register(new PayCommand()::register);
         CommandRegistrationCallback.EVENT.register(new SearchBalCommand()::register);
-        CommandRegistrationCallback.EVENT.register(new CouponCommand()::register);
     }
 
 
